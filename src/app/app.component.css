@@ -62,6 +62,7 @@ button {
     font-size: larger;
     border-radius: 6px;
     border: none;
+    cursor: pointer;
 }
 
 
