@@ -8,5 +8,11 @@ Flopchooser lets you guess which of two movies was the bigger flop - the compari
 - HTML5
 - CSS
 
+# Usage
+## Development server
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Build
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
 ## Sources
 I used the basic structure of the html and app-component from ["Fundamentals of Angular"-tutorial by Joe Eames](https://thinkster.io/tutorials/fundamentals-of-angular-getting-started) to modify and added all of the logic and styling.
