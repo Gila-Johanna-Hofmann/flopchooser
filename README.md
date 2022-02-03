@@ -9,4 +9,4 @@ HTML5
 CSS
 
 ## Sources
-["Fundamentals of Angular"-tutorial by Joe Eames](https://thinkster.io/tutorials/fundamentals-of-angular-getting-started).
+I used the basic structure of the html and app-component from ["Fundamentals of Angular"-tutorial by Joe Eames](https://thinkster.io/tutorials/fundamentals-of-angular-getting-started) to modify and added all of the logic and styling.
