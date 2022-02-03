@@ -10,13 +10,13 @@ import { RandomFlopService } from './Services/random-flop.service';
 export class AppComponent implements OnInit {
 
   flops;
-  hideCorrect: any;
-  hideIncorrect: any;
-  hideButton: any;
-  indexOne: any;
-  indexTwo: any;
+  hideCorrect = true;
+  hideIncorrect = true;
+  hideButton = true;
+  indexOne!: number;
+  indexTwo!: number;
 
-  constructor(public randomFlopService: RandomFlopService) {
+  constructor(private randomFlopService: RandomFlopService) {
     this.flops = FLOP_DATA;
     
   }
@@ -25,8 +25,8 @@ export class AppComponent implements OnInit {
     this.hideCorrect = true;
     this.hideIncorrect = true;
     this.hideButton = true;
-    this.indexOne = this.randomFlopService.indexOne;
-    this.indexTwo = this.randomFlopService.indexTwo;
+    this.indexOne = this.randomFlopService.randomIndexOne();
+    this.indexTwo = this.randomFlopService.randomIndexTwo();
   }
 
 
