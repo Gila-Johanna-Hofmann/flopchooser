@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FLOP_DATA } from './FLOP_DATA';
 import { RandomFlopService } from './Services/random-flop.service';
 
@@ -7,16 +7,28 @@ import { RandomFlopService } from './Services/random-flop.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  constructor(public randomFlopService: RandomFlopService) {}
+export class AppComponent implements OnInit {
 
-  flops = FLOP_DATA;
-  hideCorrect: boolean = true;
-  hideIncorrect: boolean = true;
-  hideButton: boolean = true;
-  indexOne = this.randomFlopService.indexOne;
-  indexTwo = this.randomFlopService.indexTwo;
-  
+  flops;
+  hideCorrect: any;
+  hideIncorrect: any;
+  hideButton: any;
+  indexOne: any;
+  indexTwo: any;
+
+  constructor(public randomFlopService: RandomFlopService) {
+    this.flops = FLOP_DATA;
+    
+  }
+
+  ngOnInit() {
+    this.hideCorrect = true;
+    this.hideIncorrect = true;
+    this.hideButton = true;
+    this.indexOne = this.randomFlopService.indexOne;
+    this.indexTwo = this.randomFlopService.indexTwo;
+  }
+
 
   onClick() {
     this.indexOne = this.randomFlopService.randomIndexOne();
@@ -24,32 +36,31 @@ export class AppComponent {
     this.hideCorrect = true;
     this.hideIncorrect = true;
     this.hideButton = true;
-    
-    console.log("indexOne. "+this.indexOne)
-    console.log("indexTwo " +this.indexTwo)
   }
 
   
 
   onChooseFlop(chosenFlop: number) {
-    if (chosenFlop === 1) {
-      if(this.indexOne > this.indexTwo) {
-        this.hideCorrect = false;
+    if(this.hideButton === true) {
+      if (chosenFlop === 1) {
+        if(this.indexOne < this.indexTwo) {
+          this.hideCorrect = false;
+        }
+        else{
+          this.hideIncorrect = false;
+        }
+        this.hideButton = false;
       }
-      else{
-        this.hideIncorrect = false;
+      else if (chosenFlop === 2) {
+        if(this.indexTwo < this.indexOne) {
+          this.hideCorrect = false;
+        }
+        else{
+          this.hideIncorrect = false;
+        }
+        this.hideButton = false;
       }
-      this.hideButton = false;
-    }
-    else if (chosenFlop === 2) {
-      if(this.indexTwo > this.indexOne) {
-        this.hideCorrect = false;
-      }
-      else{
-        this.hideIncorrect = false;
-      }
-      this.hideButton = false;
-    }
+    } 
   }
 }
   
