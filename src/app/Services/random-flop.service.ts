@@ -7,9 +7,6 @@ import { FLOP_DATA } from "../FLOP_DATA";
 export class RandomFlopService {
     flops = FLOP_DATA;
     
-    indexOne = this.randomIndexOne();
-    indexTwo = this.randomIndexTwo();
-
     randomIndexOne() {
         return Math.floor(Math.random() * this.flops.length);
     }
@@ -17,7 +14,7 @@ export class RandomFlopService {
     randomIndexTwo() {
         let indexTwo = Math.floor(Math.random() * this.flops.length);
         
-        while (indexTwo === this.indexOne) {
+        while (indexTwo === this.randomIndexOne()) {
             indexTwo = Math.floor(Math.random() * this.flops.length);
         }
         return indexTwo;
