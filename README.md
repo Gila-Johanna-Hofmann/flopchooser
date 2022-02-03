@@ -1,6 +1,8 @@
 # Flopchooser
 
 Flopchooser lets you guess which of two movies was the bigger flop - the comparison is based on IMDB-ratings.<br/>Flopchooser is my first ever Angular-App. It's the solution to the coding-challenge in chapter two, "Organizing an Angular Application", of ["Fundamentals of Angular"-tutorial by Joe Eames](https://thinkster.io/tutorials/fundamentals-of-angular-getting-started).
+<br/>
+![this is a screenshot of flopchooser in the brwoser](https://github.com/Gila-Johanna-Hofmann/flopchooser/blob/master/src/assets/screenshot-flopchooser.png)
 
 # Technologies
 - TypeScript 4.5.5
