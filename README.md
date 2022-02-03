@@ -18,4 +18,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 Project is *finished*
 
 # Sources
-I used the basic structure of the html and app-component from ["Fundamentals of Angular"-tutorial by Joe Eames](https://thinkster.io/tutorials/fundamentals-of-angular-getting-started) to modify and added all of the logic and styling.
+I used and modified the basic structure of the html and app-component from ["Fundamentals of Angular"-tutorial by Joe Eames](https://thinkster.io/tutorials/fundamentals-of-angular-getting-started) and added all of the logic and styling.
